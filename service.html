@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: white;
+      }
+
+      .head {
+        color: #000c60;
+      }
+
+      .btns {
+        padding: 40px;
+        font-weight: 600;
+      }
+
+      .btns #btn1 {
+        padding: 8px 25px;
+        border: 2px solid rgb(0, 12, 96);
+        border-radius: 10px;
+      }
+
+      #btn2 {
+        padding: 08px 25px;
+        border: 2px solid rgb(0, 12, 96);
+        border-radius: 10x;
+        margin-left: 20px;
+        background: linear-gradient(
+          to right,
+          rgb(84, 58, 193),
+          rgb(164, 41, 215)
+        );
+        color: white;
+      }
+
+      .card-title {
+        color: #000c60;
+      }
+
+      .link {
+        color: #a774f4;
+      }
+
+      #card {
+        transition: transform 0.5s ease-in;
+      }
+
+      #card:hover {
+        transform: scale(1.1);
+      }
+
+      #font {
+        color: #000c60;
+        padding: 10px 30px;
+        background-color: #ffebeb;
+        border-radius: 30px;
+      }
+
+      .bg1 {
+        position: absolute;
+        left: 0px;
+        transition: 0.5s all;
+      }
+
+      .bg2 {
+        position: absolute;
+        right: 0px;
+        transition: 0.5s all;
+      }
+
+      .ropeline {
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        animation: zoom-in-zoom-out 1s ease infinite;
+
+        transition: 0.5s all;
+      }
+
+      .caro {
+        position: absolute;
+      }
+
+      .box {
+        position: relative;
+        z-index: 3;
+      }
+
+      .cardd {
+        background-color: white;
+      }
+
+      .container {
+        justify-content: center;
+      }
+
+      .footer {
+        background-color: white;
+        position: relative;
+        padding: 20px 0 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navbar -->
+
+    <nav
+      class="md:flex-row bg-white flex items-center justify-around p-3 shadow-md"
+    >
+      <div class="flex items-center space-x-4">
+        <a
+          ><img
+            src="https://konadigital.in/images/logo.png"
+            alt="Logo"
+            class="h-16"
+        /></a>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-button" class="text-gray-700 focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div
+        id="menu"
+        class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-8 text-gray-700"
+      >
+        <div class="relative group">
+          <button class="focus:outline-none" id="dropdown">Products</button>
+
+          <div class="absolute hidden group-hover:block bg-white shadow-lg">
+            <div
+              id="dropdown"
+              class="mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+            >
+              <div
+                class="py-1"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="dropdown"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  role="menuitem"
+                  >LMS</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  role="menuitem"
+                  >CRM</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  role="menuitem"
+                  >HRMS</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative group">
+          <button class="focus:outline-none">Solutions</button>
+          <div class="absolute hidden group-hover:block bg-white shadow-lg">
+            <div
+              id="dropdown"
+              class="mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+            >
+              <div
+                class="py-1"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="dropdown"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  role="menuitem"
+                  >LMS</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  role="menuitem"
+                  >CRM</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  role="menuitem"
+                  >HRMS</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative group">
+          <button class="focus:outline-none">Services</button>
+          <div class="absolute hidden group-hover:block bg-white shadow-lg">
+            <div
+              id="dropdown"
+              class="mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+            >
+              <div
+                class="py-1"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="dropdown"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  role="menuitem"
+                  >LMS</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  role="menuitem"
+                  >CRM</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  role="menuitem"
+                  >HRMS</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="focus:outline-none">Resources</a>
+      </div>
+
+      <button
+        class="bg-purple-600 text-white px-4 py-2 rounded-full shadow-md hover:bg-purple-700 focus:outline-none"
+        onclick="showForm()"
+      >
+        Start Now
+      </button>
+    </nav>
+    <!-- CARDS -->
+
+    <div class="head flex-wrap flex flex-row justify-around heading mt-36 P-1">
+      <div class="text-center flex flex-col items-center justify-center p-4">
+        <h2 class="font-bold text-rgb(242,230,255) font-extrabold text-3xl">
+          Empower your<br />
+          institution's credence with<br />the most versatile CRM<br />
+          software.
+        </h2>
+
+        <br />
+        <p>
+          Reinforce the trust among your prospective audience and enhance the<br />
+          customer experience multifold with Konas CRM software. Take<br />
+          your customer support and relationship management operations<br />
+          to the next level.
+        </p>
+        <div class="btns">
+          <a href="#" id="btn2">Ask for Free Demo</a>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-end pe-0">
+          <img
+            src="https://konadigital.in/images/pbanner.jpg"
+            height="40%"
+            width="60%"
+            class="max-w-full"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="head flex-wrap flex flex-row justify-around heading mt-36 P-1"
+    ></div>
+    <div class="">
+      <div class="ms-20 me-20 mb-4">
+        <div class="flex flex-wrapflex-row justify-around -mx-2">
+          <!-- Card 1 -->
+          <div class="px-2 mb-4">
+            <div
+              class="text-center flex flex-col items-center justify-center sm-white p-6 rounded-sm"
+            >
+              <img
+                src="https://konadigital.in/images/f1.png"
+                alt="Card Image 1"
+                class="h-auto rounded-md mb-4"
+              />
+              <h2 class="text-xl font-bold mb-2">Capture leads</h2>
+              <p class="text-gray-700">
+                Intuitive lead gathering capability that enables you to contact
+                your potential leads with ease and convert them into rewarding
+                customers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="px-2 mb-4">
+            <div
+              class="text-center flex flex-col items-center justify-center sm-white p-6 rounded-sm"
+            >
+              <img
+                src="https://konadigital.in/images/f2.png"
+                alt="Card Image 1"
+                class="h-auto rounded-md mb-4"
+              />
+              <h2 class="text-xl font-bold mb-2">Capture leads</h2>
+              <p class="text-gray-700">
+                Intuitive lead gathering capability that enables you to contact
+                your potential leads with ease and convert them into rewarding
+                customers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="px-2 mb-4">
+            <div
+              class="text-center flex flex-col items-center justify-center sm-white p-6 rounded-sm"
+            >
+              <img
+                src="https://konadigital.in/images/f3.png"
+                alt="Card Image 1"
+                class="h-auto rounded-md mb-4"
+              />
+              <h2 class="text-xl font-bold mb-2">Capture leads</h2>
+              <p class="text-gray-700">
+                Intuitive lead gathering capability that enables you to contact
+                your potential leads with ease and convert them into rewarding
+                customers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ms-20 me-20 mb-8">
+        <div class="flex flex-wrapflex-row justify-center -mx-2">
+          <!-- Card 1 -->
+          <div class="px-2 mb-4">
+            <div
+              class="text-center flex flex-col items-center justify-center sm-white p-6 rounded-sm"
+            >
+              <img
+                src="https://konadigital.in/images/f3.png"
+                alt="Card Image 1"
+                class="h-auto rounded-md mb-4"
+              />
+              <h2 class="text-xl font-bold mb-2">Capture leads</h2>
+              <p class="text-gray-700">
+                Intuitive lead gathering capability that enables you to contact
+                your potential leads with ease and convert them into rewarding
+                customers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="px-2 mb-4">
+            <div
+              class="text-center flex flex-col items-center justify-center sm-white p-6 rounded-sm"
+            >
+              <img
+                src="https://konadigital.in/images/f4.png"
+                alt="Card Image 1"
+                class="h-auto rounded-md mb-4"
+              />
+              <h2 class="text-xl font-bold mb-2">Capture leads</h2>
+              <p class="text-gray-700">
+                Intuitive lead gathering capability that enables you to contact
+                your potential leads with ease and convert them into rewarding
+                customers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="px-2 mb-4">
+            <div
+              class="text-center flex flex-col items-center justify-center sm-white p-6 rounded-sm"
+            >
+              <img
+                src="https://konadigital.in/images/f1.png"
+                alt="Card Image 1"
+                class="h-auto rounded-md mb-4"
+              />
+              <h2 class="text-xl font-bold mb-2">Capture leads</h2>
+              <p class="text-gray-700">
+                Intuitive lead gathering capability that enables you to contact
+                your potential leads with ease and convert them into rewarding
+                customers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="head flex-wrap flex flex-row justify-center heading mt-36 P-1 mb-36"
+    >
+      <div class="text-center flex flex-col items-center justify-center p-4">
+        <div class="flex flex-col justify-center">
+          <div>
+            <span
+              class="bg-gradient-to-r from-purple-400 to-green-400 text-white text-sm font-semibold px-4 py-2 rounded-full inline-block mb-4"
+            >
+              Insights and Updates
+            </span>
+          </div>
+
+          <h1 class="text-4xl font-bold text-purple-700 mb-4">
+            AICopy is built for everyone.
+          </h1>
+          <p class="text-gray-600 mb-6">
+            Track user behavior, sales revenue, and other key metrics essential
+            to your business's success.
+          </p>
+          <ul class="text-gray-700 space-y-2">
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-purple-600 mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.707a1 1 0 00-1.414-1.414L9 9.586 7.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path></svg
+              >Customer Balance
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-purple-600 mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.707a1 1 0 00-1.414-1.414L9 9.586 7.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path></svg
+              >Template Category Access
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-purple-600 mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.707a1 1 0 00-1.414-1.414L9 9.586 7.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path></svg
+              >User Spending
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-end pe-0">
+          <img
+            src="https://konadigital.in/images/ai.png"
+            height="50%"
+            width="80%"
+            class="max-w-full"
+          />
+        </div>
+      </div>
+    </div>
+    <h3
+      class="text-4xl text-center font-bold justify-center"
+      style="color: #000c60"
+    >
+      Q&A
+    </h3>
+    <div>
+      <div class="max-w-xl mx-auto">
+        <div class="border-b border-gray-200">
+          <button
+            class="w-full text-left py-4 text-lg font-medium text-gray-900 flex justify-between items-center"
+          >
+            What services does Kona Digital provide?
+            <svg
+              class="w-5 h-5 transform transition-transform"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06 0L10 10.92l3.71-3.71a.75.75 0 011.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <div class="hidden">
+            <p class="text-gray-600 py-2">
+              Kona Digital specializes in building custom AI applications,
+              including AI-powered CRM, LMS, and HRMS solutions. We also offer
+              comprehensive marketing, sales, and service solutions tailored to
+              the unique needs of various industries, including education, real
+              estate, IT, and more.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="border-b border-gray-200">
+          <button
+            class="w-full text-left py-4 text-lg font-medium text-gray-900 flex justify-between items-center"
+          >
+            How can AI solutions benefit my business?
+            <svg
+              class="w-5 h-5 transform transition-transform"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06 0L10 10.92l3.71-3.71a.75.75 0 011.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <div class="hidden">
+            <p class="text-gray-600 py-2">
+              AI solutions can automate repetitive tasks, provide valuable
+              insights through predictive analytics, enhance personalized
+              interactions, improve operational efficiency, and ultimately drive
+              better business outcomes. Whether it's managing customer
+              relationships, optimizing HR processes, or enhancing learning
+              experiences, our AI solutions are designed to meet your specific
+              needs.
+            </p>
+          </div>
+        </div>
+        <div class="border-b border-gray-200">
+          <button
+            class="w-full text-left py-4 text-lg font-medium text-gray-900 flex justify-between items-center"
+          >
+            Is it easy to integrate kona Digital's AI solutions with my existing
+            systems?
+            <svg
+              class="w-5 h-5 transform transition-transform"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06 0L10 10.92l3.71-3.71a.75.75 0 011.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <div class="hidden">
+            <p class="text-gray-600 py-2">
+              Yes, our AI solutions are designed to seamlessly integrate with
+              various existing tools and platforms, ensuring a smooth transition
+              and consistency across your workflows. This minimizes disruption
+              and maximizes efficiency.
+            </p>
+          </div>
+        </div>
+
+        <div class="border-b border-gray-200">
+          <button
+            class="w-full text-left py-4 text-lg font-medium text-gray-900 flex justify-between items-center"
+          >
+            Can kona Digital's solutions be customized for my business?
+            <svg
+              class="w-5 h-5 transform transition-transform"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06 0L10 10.92l3.71-3.71a.75.75 0 011.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <div class="hidden">
+            <p class="text-gray-600 py-2">
+              Absolutely. We understand that every business is unique. Our AI
+              solutions are highly customizable, allowing us to tailor features,
+              workflows, and dashboards to align with your specific business
+              processes and objectives
+            </p>
+          </div>
+        </div>
+
+        <div class="border-b border-gray-200">
+          <button
+            class="w-full text-left py-4 text-lg font-medium text-gray-900 flex justify-between items-center"
+          >
+            How does Kona Digital ensure data security?
+            <svg
+              class="w-5 h-5 transform transition-transform"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06 0L10 10.92l3.71-3.71a.75.75 0 011.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <div class="hidden">
+            <p class="text-gray-600 py-2">
+              We prioritize data security and comply with industry-leading
+              standards and regulations. Our solutions include robust security
+              measures such as data encryption, access control, and regular
+              security audits to ensure your information.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col lg:flex-row items-center justify-between py-16 px-6 lg:px-16 bg-gradient-to-b from-white to-blue-50 mt-20"
+    >
+      <div class="text-center lg:text-left mb-8 lg:mb-0">
+        <h2 class="text-3xl font-bold text-purple-600 mb-4">Let's connect.</h2>
+        <p class="text-gray-600 mb-6">
+          Whether you have a groundbreaking idea or a challenging project in
+          mind, AI Hub is here to make it a reality.
+        </p>
+        <a
+          href="#"
+          class="inline-block bg-gradient-to-r from-purple-500 to-purple-700 text-white font-semibold px-2 py-2 rounded-lg shadow-lg"
+        >
+          Send Message
+        </a>
+      </div>
+      <div class="flex-shrink-0">
+        <img
+          src="https://konadigital.in/images/connect.png"
+          alt="Illustration"
+          class="w-64 lg:w-80"
+        />
+      </div>
+    </div>
+
+    <!-- foooter -->
+    <div class="footer bg-white">
+      <footer class="bg-white py-8">
+        <div class="container px-4 flex flex-col lg:flex-row justify-around">
+          <div class="text-center lg:text-left mb-4 lg:mb-0">
+            <img src="https://konadigital.in/images/ftlog.png" />
+            <p class="text-gray-600 mt-4 max-w-sm">
+              At our company, we are dedicated to supporting you in the seamless
+              creation of exceptional content that is both efficient and high in
+              quality. Our expert team and advanced AI-powered tools work hand
+              in hand to assist you in effortlessly producing top-notch content
+              that captivates your audience.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-wrap text-center lg:text-left lg:justify-center"
+          >
+            <div class="lg:mx-4 mb-4 lg:mb-0">
+              <h3 class="text-lg font-bold text-gray-800">Products</h3>
+              <ul class="mt-2 space-y-3">
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-500"
+                    >LMS</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-500"
+                    >CRM</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-500"
+                    >HRMS</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="lg:mx-4 mb-4 lg:mb-0">
+              <h3 class="text-lg font-bold text-gray-800">Solutions</h3>
+              <ul class="mt-2 space-y-3">
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-500"
+                    >LMS</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-500"
+                    >CRM</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-500"
+                    >HRMS</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="lg:mx-4 mb-4 lg:mb-0">
+              <h3 class="text-lg font-bold text-gray-800">Services</h3>
+              <ul class="mt-2 space-y-3">
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-500"
+                    >LMS</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-500"
+                    >CRM</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-500"
+                    >HRMS</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="lg:mx-4 mb-4 lg:mb-0">
+              <h3 class="text-lg font-bold text-gray-800">Resources</h3>
+            </div>
+          </div>
+
+          <div class="mt-8 lg:mt-0">
+            <img
+              src="https://konadigital.in/images/fticon.png.png"
+              alt="Robot"
+              class="h-32 mx-auto lg:mx-0"
+            />
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const menuButton = document.getElementById("menu-button");
+      const menu = document.getElementById("menu");
+
+      menuButton.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      document.querySelectorAll("button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const content = button.nextElementSibling;
+          const icon = button.querySelector("svg");
+
+          content.classList.toggle("hidden");
+          icon.classList.toggle("rotate-180");
+        });
+      });
+
+      function showForm() {
+        window.location.href = "form.html";
+      }
+    </script>
+  </body>
+</html>
